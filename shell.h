@@ -17,4 +17,11 @@
 #include <errno.h>
 #include <linux/limits.h>
 
+/** String **/
+int _putchar(char c);
+void _puts(char *str);
+char *_strcpy(char *dest, char *src, int n);
+int _strlent(char *s);
+int _atoi(char *s);
+
 #endif
