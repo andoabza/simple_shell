@@ -20,8 +20,14 @@
 /** String **/
 int _putchar(char c);
 void _puts(char *str);
-char *_strcpy(char *dest, char *src, int n);
-int _strlent(char *s);
+char _strcpy(char *dest, char *src, int n);
+int _strlen(char *s);
 int _atoi(char *s);
+char _strcpy(char *dest, char *src);
+char _strcat(char *dest, char *src);
+char _strchr(char *s, char c);
+int _strncmp(const char *s1, const char *s2, size_t n);
+char _strdup(char *str);
+
 
 #endif
