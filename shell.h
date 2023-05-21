@@ -34,4 +34,11 @@ char _itoa(unsigned int n);
 void array_rev(char *arr, int len);
 int intlen(int num);
 
+/** memory **/
+char _memcpy(char *dest, char *src, unsigned int n);
+void _realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+void free_all(char **cmd, char *line);
+void fill_an_array(void *a, int el, unsigned int len);
+void _calloc(unsigned int size);
+
 #endif
