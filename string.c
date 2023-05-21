@@ -55,7 +55,7 @@ char *_strcpy(char *dest, char *src, int n)
  * @s: string input
  * Return: length of string
  */
-int _strlent(char *s)
+int _strlen(char *s)
 {
   int i;
 
