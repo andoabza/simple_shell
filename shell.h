@@ -41,4 +41,11 @@ void free_all(char **cmd, char *line);
 void fill_an_array(void *a, int el, unsigned int len);
 void _calloc(unsigned int size);
 
+/** input func **/
+char _getline();
+char enter(char *string);
+char space(char *str);
+void hashtag_handler(char *buff);
+
+
 #endif
