@@ -28,6 +28,10 @@ char _strcat(char *dest, char *src);
 char _strchr(char *s, char c);
 int _strncmp(const char *s1, const char *s2, size_t n);
 char _strdup(char *str);
-
+int _strcmp(char *s1, char *s2);
+int _isalpha(int c);
+char _itoa(unsigned int n);
+void array_rev(char *arr, int len);
+int intlen(int num);
 
 #endif
