@@ -46,6 +46,9 @@ char _getline();
 char enter(char *string);
 char space(char *str);
 void hashtag_handler(char *buff);
+void prompt(void);
+char _strtok(char *str, const char *delim);
+unsigned int check_delim(char c, const char *str);
 
 
 #endif
