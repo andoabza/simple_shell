@@ -33,7 +33,7 @@ void _puts(char *str)
  * @n: number of charaters to be copied
  * Return: copied strings
  */
-char *_strcpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
   int i = 0;
 

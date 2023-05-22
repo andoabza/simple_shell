@@ -55,7 +55,7 @@ int _isalpha(int c)
  * @n: integer to convert
  * Return: character pointer
  */
-char _itoa(unsigned int n)
+char *_itoa(unsigned int n)
 {
   int len = 0, i = 0;
   char *s;

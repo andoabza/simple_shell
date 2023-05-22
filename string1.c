@@ -6,7 +6,7 @@
  * @src: source
  * Return: destination
  */
-char _strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
   int i = 0;
 
@@ -25,7 +25,7 @@ char _strcpy(char *dest, char *src)
  * @src: second string
  * Return: first string + second string
  */
-char _strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
   char *s = dest;
 
@@ -50,7 +50,7 @@ char _strcat(char *dest, char *src)
  * @c: character to be located
  * Return: pointer to character
  */
-char _strchr(char *s, char c)
+char *_strchr(char *s, char c)
 {
   do {
     if (*s == c)
@@ -90,7 +90,7 @@ int _strncmp(const char *s1, const char *s2, size_t n)
  * @str: string
  * Return: duplicated string or Null if failed
  */
-char _strdup(char *str)
+char *_strdup(char *str)
 {
   size_t len, i;
   char *str2;

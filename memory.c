@@ -7,7 +7,7 @@
  *@new_size: new size of the pointer
  *Return: Pointer to reallocated memory
  */
-void _realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
   void *result;
 
@@ -58,7 +58,7 @@ void free_all(char **cmd, char *line)
  *@n: size to be copied
  *Return: pointer to destination
  */
-char _memcpy(char *dest, char *src, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
   unsigned int i;
 
@@ -76,7 +76,7 @@ char _memcpy(char *dest, char *src, unsigned int n)
  *@len: length for int
  *Return: void pointer
  */
-void fill_an_array(void *a, int el, unsigned int len)
+void *fill_an_array(void *a, int el, unsigned int len)
 {
   char *p = a;
   unsigned int i = 0;
@@ -95,7 +95,7 @@ void fill_an_array(void *a, int el, unsigned int len)
  *@size: size
  *Return: void pointer
  */
-void _calloc(unsigned int size)
+void *_calloc(unsigned int size)
 {
   char *a;
   unsigned int i;
