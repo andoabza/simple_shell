@@ -72,4 +72,9 @@ extern char **environ;
 void create_envi(char **envi);
 void free_env(char **env);
 
+/** print **/
+void print_number(unsigned int n);
+void print_number_int(int n);
+int print_echo(char **cmd);
+
 #endif

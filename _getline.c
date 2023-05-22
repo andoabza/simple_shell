@@ -4,7 +4,7 @@
  * _getline - read input from  user
  * Return: the input on a buffer
  */
-char _getline()
+char *_getline()
 {
   int i, rd, buffsize = BUFSIZE;
   char c = 0, *buffer, *buf;
@@ -49,7 +49,7 @@ char _getline()
  * @string: String to be handled
  * Return: Empty string
  */
-char enter(char *string)
+char *enter(char *string)
 {
   free(string);
   return ("\0");
@@ -60,7 +60,7 @@ char enter(char *string)
  * @str: Input to be modifies
  * Return: Returns the modified string
  */
-char space(char *str)
+char *space(char *str)
 {
   int i, j = 0;
   char *buff;
