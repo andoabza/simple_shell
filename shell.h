@@ -62,4 +62,10 @@ char **parse_cmd(char *input);
 int check_cmd(char **cmd, char *input, int c, char **argv);
 void signal_to_handle(int sig);
 
+/** error **/
+void print_error(char *input, int counter, char **argv);
+void _prerror(char **argv, int c, char **cmd);
+void error_file(char **argv, int c);
+
+
 #endif
