@@ -57,5 +57,9 @@ void read_file(char *file, char **argv);
 void treat_file(char *line, int count, FILE *fp, char **argv);
 void exit_bul_for_file(char **cmd, char *line, FILE *fd);
 
+/** cmd parser **/
+char **parse_cmd(char *input);
+int check_cmd(char **cmd, char *input, int c, char **argv);
+void signal_to_handle(int sig);
 
 #endif
