@@ -67,5 +67,9 @@ void print_error(char *input, int counter, char **argv);
 void _prerror(char **argv, int c, char **cmd);
 void error_file(char **argv, int c);
 
+/** enviroment **/
+extern char **environ;
+void create_envi(char **envi);
+void free_env(char **env);
 
 #endif
