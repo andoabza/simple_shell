@@ -49,6 +49,7 @@ void hashtag_handler(char *buff);
 void prompt(void);
 char _strtok(char *str, const char *delim);
 unsigned int check_delim(char c, const char *str);
-
+int history(char *input);
+char separator(char *input);
 
 #endif

@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _getline - read input from standard input by user
+ * _getline - read input from  user
  * Return: the input on a buffer
  */
 char _getline()
@@ -45,7 +45,7 @@ char _getline()
 }
 
 /**
- * enter - Handles newline character input
+ * enter - Handles newline character
  * @string: String to be handled
  * Return: Empty string
  */
@@ -56,7 +56,7 @@ char enter(char *string)
 }
 
 /**
- * space - Modifies the input string to remove preceeding whitespaces
+ * space - Modifies the input string to preceeding whitespaces
  * @str: Input to be modifies
  * Return: Returns the modified string
  */
@@ -88,7 +88,7 @@ char space(char *str)
 }
 
 /**
- * hashtag_handler - function that removes everything after '#'
+ * hashtag_handler - that removes everything after '#'
  * @buff: input buffer
  * Return: nothing
  */
