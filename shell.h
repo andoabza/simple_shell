@@ -93,10 +93,22 @@ void help_setenv(void);
 void help_unsetenv(void);
 int display_help(char **cmd, __attribute__((unused))int st);
 
+/** nuiltin struct **/
+typedef struct _builtin
+{
+  char *command;
+  int (*function)(char **line, int st);
+} builtin;
+
 /** execute **/
 int change_dir(char **cmd, __attribute__((unused))int st);
 int dis_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int st);
 int echo_bul(char **cmd, int st);
 int history_dis(__attribute__((unused))char **c, __attribute__((unused))int st);
+
+/** exit **/
+int check_builtin(char **cmd);
+int handle_builtin(char **cmd, int st);
+void exit_bul(char **cmd, char *input, char **argv, int c, int stat);
 
 #endif
