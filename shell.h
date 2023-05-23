@@ -82,5 +82,15 @@ int path_cmd(char **cmd);
 char *build(char *token, char *value);
 char *_getenv(char *name);
 
+/** builtin **/
+void help_all(void);
+void help_alias(void);
+void help_cd(void);
+void help_exit(void);
+void help_help(void);
+void help_env(void);
+void help_setenv(void);
+void help_unsetenv(void);
+int display_help(char **cmd, __attribute__((unused))int st);
 
 #endif
