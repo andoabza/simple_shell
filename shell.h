@@ -77,4 +77,10 @@ void print_number(unsigned int n);
 void print_number_int(int n);
 int print_echo(char **cmd);
 
+/** path **/
+int path_cmd(char **cmd);
+char *build(char *token, char *value);
+char *_getenv(char *name);
+
+
 #endif
