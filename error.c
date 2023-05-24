@@ -18,7 +18,7 @@ void print_error(char *input, int counter, char **argv)
   free(er);
   PRINT(": ");
   PRINT(input);
-  PRINT(": not found\n");
+  PRINT(" : not found\n");
 }
 
 /**
