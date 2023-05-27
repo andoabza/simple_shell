@@ -6,32 +6,31 @@
 **/
 int bexecute(char **tokens)
 {
-	int status;
-	unsigned int length;
-	unsigned int i;
-	unsigned int counter;
+  int status;
+  unsigned int length;
+  unsigned int i;
+  unsigned int counter;
 
-	_builtin builtin[] = {
-		{"exit", exiter},
-		{"env", env_display},
-		{NULL, NULL}
-	};
-	if (tokens[0] == NULL)
-		return (1);
+  _builtin builtin[] = {
+			{"exit", exiter},
+			{"env", env_display},
+			{NULL, NULL}
+  };
+  if (tokens[0] == NULL)
+    return (1);
 
-	length = _strlen(tokens[0]);
-	counter = builtin_counter(builtin);
-	for (i = 0; i < counter; i++)
+  length = _strlen(tokens[0]);
+  counter = builtin_counter(builtin);
+  for (i = 0; i < counter; i++)
+    {
+      if (_strcmp(tokens[0], builtin[i].cmd, length) == 0)
 	{
-		if (_strcmp(tokens[0], builtin[i].cmd, length) == 0)
-		{
-			status = (builtin[i].fun)();
-			return (status);
-		}
+	  status = (builtin[i].fun)();
+	  return (status);
 	}
-	return (1);
+    }
+  return (1);
 }
-
 /**
  *builtin_counter - counts builtin commands from a given array
  *@arr:array
@@ -40,13 +39,13 @@ int bexecute(char **tokens)
  */
 int builtin_counter(_builtin arr[])
 {
-	unsigned int count = 0;
+  unsigned int count = 0;
 
-	while (arr[count].cmd != NULL)
-	{
-		count++;
-	}
-	return (count);
+  while (arr[count].cmd != NULL)
+    {
+      count++;
+    }
+  return (count);
 }
 /**
 **exiter - exits the shell of the programmm
@@ -54,7 +53,7 @@ int builtin_counter(_builtin arr[])
 **/
 int exiter(void)
 {
-	return (-1);
+  return (-1);
 }
 
 
@@ -64,15 +63,15 @@ int exiter(void)
 **/
 int env_display(void)
 {
-	unsigned int i;
+  unsigned int i;
 
-	i = 0;
-	while (environ[i] != NULL)
-	{
-		_puts(environ[i]);
-		_putchar('\n');
-		i++;
-	}
-	return (0);
+  i = 0;
+  while (environ[i] != NULL)
+    {
+      _puts(environ[i]);
+      _putchar('\n');
+      i++;
+    }
+  return (0);
 }
 
