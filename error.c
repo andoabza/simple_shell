@@ -6,6 +6,6 @@
  */
 void errors(char *error)
 {
-	write(STDERR_FILENO, error, _strlen(error));
-	perror(" ");
+  write(STDERR_FILENO, error, _strlen(error));
+  perror(" ");
 }
