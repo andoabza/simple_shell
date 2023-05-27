@@ -7,18 +7,18 @@
  */
 char *_getline(FILE *fp)
 {
-	char *cmd;
-	ssize_t status;
-	size_t len;
+  char *cmd;
+  ssize_t status;
+  size_t len;
 
-	cmd = NULL;
-	len = 0;
-	status = getline(&cmd, &len, fp);
-	if (status == -1)
-	{
-		free(cmd);
-		exit(EXIT_SUCCESS);
-	}
+  cmd = NULL;
+  len = 0;
+  status = getline(&cmd, &len, fp);
+  if (status == -1)
+    {
+      free(cmd);
+      exit(EXIT_SUCCESS);
+    }
 
-	return (cmd);
+  return (cmd);
 }
