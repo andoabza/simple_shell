@@ -10,17 +10,17 @@
  */
 void free_all(char **tokens, char *path, char *line, char *fullpath, bool get)
 {
-	if (path == NULL)
-		;
-	else
-		free(path);
-	if(tokens == NULL)
-		;
-	else
-		free(tokens);
-	free(line);
-	if (get == true)
-		free(fullpath);
+  if (path == NULL)
+    ;
+  else
+    free(path);
+  if(tokens == NULL)
+    ;
+  else
+    free(tokens);
+  free(line);
+  if (get == true)
+    free(fullpath);
 }
 
 /**
@@ -30,18 +30,18 @@ void free_all(char **tokens, char *path, char *line, char *fullpath, bool get)
  */
 void free_dp(char **array, unsigned int length)
 {
-	unsigned int i;
+  unsigned int i;
 
-	i = 0;
-	if (array == NULL)
-		;
-	else
+  i = 0;
+  if (array == NULL)
+    ;
+  else
+    {
+      while (i < length)
 	{
-		while (i < length)
-		{
-			free(array[i]);
-			i++;
-		}
-		free(array);
+	  free(array[i]);
+	  i++;
 	}
+      free(array);
+    }
 }
