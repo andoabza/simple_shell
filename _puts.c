@@ -7,11 +7,11 @@
 **/
 void _puts(char *str)
 {
-	unsigned int length;
+  unsigned int length;
 
-	length = _strlen(str);
+  length = _strlen(str);
 
-	write(STDOUT_FILENO, str, length);
+  write(STDOUT_FILENO, str, length);
 }
 /**
  * _putchar - writes the character c to stdout
@@ -22,5 +22,5 @@ void _puts(char *str)
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+  return (write(1, &c, 1));
 }
