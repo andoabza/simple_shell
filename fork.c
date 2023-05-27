@@ -8,29 +8,29 @@
  */
 int forking(char *fullpath, char **tokens)
 {
-	pid_t c_pid;
-	int status;
-	int stat;
-	char **envp = environ;
+  pid_t c_pid;
+  int status;
+  int stat;
+  char **envp = environ;
 
-	c_pid = fork();
-	if (c_pid == -1)
+  c_pid = fork();
+  if (c_pid == -1)
+    {
+      errors(ERR_FORK);
+      exit(EXIT_FAILURE);
+    }
+  if (c_pid == 0)
+    {
+      stat = execve(fullpath, tokens, envp);
+      if (stat == -1)
 	{
-		errors(ERR_FORK);
-		exit(EXIT_FAILURE);
+	  return (-1);
 	}
-	if (c_pid == 0)
-	{
-		stat = execve(fullpath, tokens, envp);
-		if (stat == -1)
-		{
-			return (-1);
-		}
-	}
-	else
-	{
-		wait(&status);
-	}
-
-	return (0);
+    }
+  else
+    {
+      wait(&status);
+    }
+  
+  return (0);
 }
